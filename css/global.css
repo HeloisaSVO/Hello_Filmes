@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+* {
+    background-color: rgb(134, 69, 151);
+    align-items: center;
+}
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(255, 195, 3);
+}
+
+.logoTop {
+    text-align: center;
+}
+
+.logo {
+    color: rgb(245, 234, 207);
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: xx-large;
+    text-transform: uppercase;
+    color: rgb(5, 155, 255);
+}
+
+a,
+ul,
+li {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: rgb(5, 155, 255);
+
+}
+
+#iddescricao {
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+#divResultado {
+    background-color: cyan;
+    color: blueviolet;
+    font-family: sans-serif;
+    font-size: large;
+    text-align: center;
+    border-radius: 100px;
+
+}
+
+#idvoltar {
+    float: left;
+    width: "30";
+    height: "30";
+}
+
+#idproximo {
+    float: right;
+    width: "30";
+    height: "30";
+}
+
+.titulo,
+.genero,
+.genero1,
+.genero2,
+.premios,
+.descricao,
+.nome,
+.sexo,
+.preferencias,
+.observacoes,
+.email,
+.clientes,
+.datalocacao,
+.datadevolucao,
+.prazo,
+.observacoes {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: larger;
+    color: gray;
+}
+
+.btn {
+    background-color: blueviolet;
+    color: #fafafa;
+    font-style: normal;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    padding: 5px;
+    width: 10%;
+    cursor: pointer;
+    font-size: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+#descricao,
+#idtitulo,
+#idgenero,
+#obeservacoes,
+#email,
+#nomeUsuario,
+#clientes,
+#datalocacao,
+#datadevolucao,
+#observacoes {
+    font-family: sans-serif;
+    border-color: white;
+    color: black;
+}
+
+label {
+    color: rgb(255, 195, 3);
+}
+
+textarea,
+input {
+    background: #fff;
+    color: dimgrey;
+}

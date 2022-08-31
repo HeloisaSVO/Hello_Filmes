@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        #divResultado {
+            background-color: cyan;
+            color: blueviolet;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+            text-align: center;
+            border-radius: 100px;
+
+        }
+    </style>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+</style>
+
+<body style="text-align: center; background-color: rgb(134, 69, 151); align-items: center;">
+
+    <div id="idtelaprincipal">
+        <a href="">
+            <div class="logoTop"><img src="../images/logo.jpg" alt="logo" width="300px"></div>
+        </a>
+    </div>
+    <form action="../ProjetoLocadoraFilmesHeloisaSouza/telaPrincipal.html" method="get">
+        <div id="divResultado"></div>
+        <br><br>
+
+        <h2 style=" font-family: 'Roboto', sans-serif;
+                font-size: xx-large;
+                color: rgb(245, 234, 207);">Login</h2>
+        <p style="font-family: 'Roboto', sans-serif;
+                font-size:small;
+                color: rgb(245, 234, 207);">
+
+            <label id="idemail" for="">E-mail*</label><br>
+            <input type="text" name="email" id="idemail" placeholder="E-mail" size="40" pattern=".{3,}" required
+                style="border-color: rgb(147, 153, 245);font-family: 'Roboto', sans-serif; font-size:small; padding: 5px">
+
+        </p>
+
+        <p style="font-family: 'Roboto', sans-serif;
+                font-size:small;
+                color: rgb(245, 234, 207);">
+            <label id="idsenha" for="">Senha*</label><br>
+
+            <input type="password" name="senha" id="idsenha" placeholder="Senha" required
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                size="40"
+                style="border-color: rgb(147, 153, 245);font-family: 'Roboto', sans-serif;font-size:small; padding: 5px;">
+
+            <br><br>
+        </p>
+        <p>
+            <a style="font-family: 'Roboto', sans-serif;
+                    font-size:small;
+                    text-decoration:none;
+                    color: rgb(255, 195, 3);" href="../Cadastro/cadastroNovoUsuario.html">Novo</a>&emsp;&emsp;
+
+            <a style="font-family: 'Roboto', sans-serif;
+                    font-size:small;
+                    text-decoration:none;
+                    color: rgb(255, 195, 3);" href="../ProjetoLocadoraFilmesHeloisaSouza/recuperarSenha.html">Esqueci a
+                senha
+            </a>
+
+        </p>
+        <p>
+            <button id="idbotaoentrar" type="submit" onclick="validarDados" style="background-color: blueviolet;
+                    color: rgb(245, 234, 207);
+                    font-style: normal;
+                    border-radius: 10px;
+                    padding: 5px;
+                    width: 16%;
+                    cursor: pointer;
+                    font-size: larger;
+                    font-family: 'Roboto', sans-serif;
+               ">Entrar</button>
+
+        </p>
+    </form>
+    <img src="../images/womanTv.svg" alt="tv" width="400px">
+    </div>
+    <script>
+        function validarDados() {
+            var divResultado = document.getElementById("divResultado");
+
+            var email = document.getElementById("idemail");
+            if (email.value == "") {
+                divResultado.innerHTML = "Informe o email!";
+                email.focus();
+                return false;
+            }
+            var senha = document.getElementById("idsenha");
+            if (senha.value == "") {
+                divResultado.innerHTML = "Informe a senha!";
+                email.focus();
+                return false;
+            }
+
+            divResultado.innerHTML = "";
+            alert("Seja bem vindo!");
+            window.location.href = "../ProjetoLocadoraFilmesHeloisaSouza/telaPrincipal.html";
+
+        }
+
+    </script>
+</body>
+
+</html>

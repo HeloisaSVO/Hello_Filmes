@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Novo Usuário</title>
+    <style>
+        body {
+            background-color: rgb(134, 69, 151);
+            align-items: center;
+
+        }
+
+        .logoTop {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-size: xx-large;
+            color: rgb(255, 195, 3);
+        }
+
+        .logo {
+            color: #fff;
+        }
+
+        h4,
+        p,
+        .sexo,
+        .preferencias {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-size: medium;
+            color: rgb(5, 155, 255);
+        }
+
+        input {
+            border-color: #fafafa;
+            font-family: 'Roboto', sans-serif;
+            font-size: small;
+        }
+
+        textarea {
+            border-color: blueviolet;
+            color: darkslategrey;
+            font-family: 'Roboto', sans-serif;
+            font-size: small;
+        }
+
+        a {
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+
+        button {
+            background-color: blueviolet;
+            color: #fafafa;
+            font-style: normal;
+            font-size: medium;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 10px;
+            padding: 5px;
+            width: 10%;
+            cursor: pointer;
+            font-size: normal;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #divResultado {
+            background-color: cyan;
+            color: blueviolet;
+            font-family: sans-serif;
+            font-size: large;
+            text-align: center;
+            border-radius: 100px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div style="float:left ;">
+        <a id="idvoltar" href="../ProjetoLocadoraFilmesHeloisaSouza/login.html">
+            <img src="../images/previous.png" width="30" height="30">
+        </a>
+    </div>
+    <div style="float:right ;">
+        <a id="idproximo" href="../ProjetoLocadoraFilmesHeloisaSouza/login.html">
+            <img src="../images/next-button.png" width="30" height="30">
+        </a>
+    </div>
+    <div id="idtelaprincipal">
+        <a href="../ProjetoLocadoraFilmesHeloisaSouza/login.html">
+            <div class="logoTop"><img src="../images/logo.jpg" alt="" width="300px"></div>
+        </a>
+    </div>
+    <P>
+    <h1>Cadastrar Novo Usuário</h1>
+    </P>
+    <form action="../ProjetoLocadoraFilmesHeloisaSouza/login.html" method="get">
+        <div style="text-align:center">
+            <div id="divResultado"></div>
+            <br><br>
+            <p>
+
+            <h4 class="logo">Nome*</h4>
+            <input type="text" name="nomeUsusario" id="nomeUsuario" placeholder="Informe o seu nome" size="40"
+                pattern=".{3,}" required>
+            </p>
+            <br>
+            <div class="sexo">
+                <h4 class="logo" id="idsexo">Sexo*</h4>
+                </label>
+                <label for="feminino" style="color: rgb(255, 195, 3);">Feminino</label>
+                <input type="radio" name="feminino" id="feminino" required>&emsp;&emsp;
+                <label for="masculino" style="color: rgb(255, 195, 3)">Masculino</label>
+                <input type="radio" name="masculino" id="masculino">&emsp;&emsp;
+                <label for="outros" style="color: rgb(255, 195, 3)">Outros</label>
+                <input type="radio" name="Outros" id="outros">
+            </div>
+            <br>
+            <div class="preferencias">
+
+                <h4 class="logo" id="idpreferencias" name="preferencias">Preferências*</h4>
+
+                <label for="acao" style="color: rgb(255, 195, 3);">Ação</label>
+                <input type="checkbox" name="acao" id="acao" required>&emsp;
+                <label for="aventura" style="color: rgb(255, 195, 3);">Aventura</label>
+                <input type="checkbox" name="aventura" id="aventura" required>&emsp;
+                <label for="comedia" style="color: rgb(255, 195, 3);">Comédia</label>
+                <input type="checkbox" name="comedia" id="comedia" required>&emsp;
+                <label for="documentarios" style="color: rgb(255, 195, 3);">Documentários</label>
+                <input type="checkbox" name="documentarios" id="documentarios">&emsp;
+                <label for="drama" style="color: rgb(255, 195, 3)">Drama</label>
+                <input type="checkbox" name="drama" id="drama">&emsp;
+                <label for="ficcaoCientifica" style="color: rgb(255, 195, 3);">Ficção Científica</label>
+                <input type="checkbox" name="ficcaoCientifica" id="ficcaoCientifica">&emsp;
+                <label for="romance" style="color: rgb(255, 195, 3)">Romance</label>
+                <input type="checkbox" name="romance" id="romance">&emsp;
+                <label for="suspense" style="color: rgb(255, 195, 3);">Suspense</label>
+                <input type="checkbox" name="suspense" id="suspense">
+            </div>
+            <br>
+            <p>
+                <label for="">
+                    <h4 class="logo">Observações</h4>
+                </label>
+                <textarea name="obeservacoes" id="obeservacoes" cols="40" rows="10"
+                    placeholder="Observações..."></textarea>
+            </p>
+            <br>
+            <p>
+                <label for="">
+                    <h4 class="logo">E-mail*</h4>
+                </label>
+                <input type="text" name="email" id="idemail" placeholder="Informe o seu e-mail" size="40"
+                    pattern=".{3,}" required>
+            </p>
+            <br>
+            <div>
+                <p><button type="submit" class="btn btn-outline-primary">Salvar</button>&emsp;
+                    <button type="reset" class="btn btn-outline-primary">Limpar</button>
+                </p>
+            </div>
+
+
+        </div>
+    </form>
+
+    <script>
+        function validarDados() {
+
+            var divResultado = document.getElementById("divResultado");
+
+            var nomeUsuario = document.getElementById("nomeUsuario");
+            if (nomeUsuario.value == "") {
+
+                divResultado.innerHTML = "Informe nome  do usuario!";
+                nomeUsuario.focus();
+                return false;
+            }
+            var sexo = document.getElementById("idsexo");
+            if (sexo.value == "") {
+                divResultado.innerHTML = "Informe o sexo!";
+                sexo.focus();
+                return false;
+
+            }
+            var checkboxs = document.getElementsByName("preferencias");
+            var checkboxSelecionado = false;
+
+            for (var i = 0; i < checkboxs.length; i++) {
+                if (checkboxs[i].checked) {
+                    checkboxSelecionado = true;
+                }
+            }
+            if (!checkboxSelecionado) {
+                divResultado.innerHTML = "Informe sua preferência!";
+                return false;
+            }
+            var email = document.getElementById("idemail");
+            if (email.value == "") {
+                divResultado.innerHTML = "Informe o seu e-mail!";
+                email.focus();
+                return false;
+            }
+
+
+            divResultado.innerHTML = "";
+            alert("Cadastro bem sucedido!");
+
+        }
+
+
+    </script>
+</body>
+
+</html>

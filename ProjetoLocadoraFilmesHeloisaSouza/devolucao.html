@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devolução</title>
+    <link rel="stylesheet" href="../css/global.css" />
+
+    <style>
+        #divResultado {
+            background-color: cyan;
+            color: blueviolet;
+            font-family: sans-serif;
+            font-size: large;
+            text-align: center;
+            border-radius: 100px;
+
+        }
+    </style>
+
+</head>
+
+<style>
+    textarea {
+        background-color: #fff;
+    }
+</style>
+
+<body>
+    <a id="idvoltar" href="../Acervo/acervo.html">
+        <img src="../images/previous.png" width="30" height="30">
+    </a>
+    </div>
+
+    </div>
+    <div id="idtelaprincipal">
+        <a href="../ProjetoLocadoraFilmesHeloisaSouza/telaPrincipal.html">
+            <div class="logoTop"><img src="../images/logo.jpg" alt="logo" width="300px"></div>
+        </a>
+    </div>
+    <div>
+        <h1>Devolução</h1>
+    </div>
+
+    </div>
+    <form action="../ProjetoLocadoraFilmesHeloisaSouza/telaPrincipal.html" method="get">
+        <div id="divResultado"></div>
+        <br><br>
+
+        <div class="clientes">
+            <label for="clientes">
+                <h4 class="logo">Clientes*</h4>
+            </label>
+            <select list="clientes" id="clientes" size="">
+                <option value="0">-----------</option>
+                <option value="1">Maria Alice Aguiar</option>
+                <option value="2">Roberta Guimarães</option>
+                <option value="3">Rita de Cássia Silva</option>
+                <option value="4">Maria José de Souza</option>
+                <option value="5">Ricardo Lopes</option>
+                <option value="6">João Paulo Freitas</option>
+                <option value="7">Beatriz liviane de Castro</option>
+                <option value="8">Mariana Evelin</option>
+                <option value="9">Suzan Vieira</option>
+            </select>
+        </div>
+        <div class="datadevolucao">
+            <label for="">
+                <h4 class="logo">Data Entrega*</h4>
+            </label>
+            <input type="datetime-local" name="datadevolucao" id="datadevolucao" pattern="" required>
+        </div>
+        <br>
+        <div class="prazo">
+            <label for="prazo" style="color: rgb(255, 195, 3);">Dentro do prazo</label>
+            <input type="radio" name="prazo" id="prazo" required>&emsp;&emsp;
+            <label for="atrasado" style="color: rgb(255, 195, 3);">Atrasado</label>
+            <input type="radio" name="atrasado" id="atrasado" >
+        </div>
+        <div class="observacoes">
+            <label for="">
+                <h4 class="logo">Observações</h4>
+            </label>
+            <textarea name="observacoes" id="observacoes" cols="40" rows="10" placeholder="Observações..."
+                style="color: #000"></textarea>
+        </div>
+        <br>
+        <p>
+            <button type="submit"  onclick="validarDados" class="btn btn-outline-primary"
+                style="color: #fff; padding: 5px; width: 100px;">Confirmar</button>&emsp;
+            <button type="reset" onclick="validarDados" class="btn btn-outline-primary"
+                style="color: #fff; padding: 5px; width: 100px;">Limpar</button>
+        </p>
+    </form>
+    <script>
+        function validarDados() {
+
+            var clientes = document.getElementById("clientes");
+            if (clientes.value == "") {
+                divResultado.innerHTML = "Informe o cliente!";
+                clientes.focus();
+                return false;
+            }
+            var prazo = document.getElementById("prazo");
+            if (prazo.value == "") {
+                divResultado.innerHTML = "Informe o prazo!";
+                prazo.focus();
+                return false;
+            }
+            var atrasado = document.getElementById("atrasado");
+            if (atrasado.value == "") {
+                divResultado.innerHTML = "Informe o prazo!";
+                atrasado.focus();
+                return false;
+            }
+            divResultado.innerHTML = "";
+            alert("Devolução bem sucedida!");
+
+        }
+
+
+    </script>
+</body>
+
+</html>

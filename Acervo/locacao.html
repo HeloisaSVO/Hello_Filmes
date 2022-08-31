@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locação</title>
+    <link rel="stylesheet" href="../css/global.css" />
+
+    <style>
+        #divResultado {
+            background-color: cyan;
+            color: blueviolet;
+            font-family: sans-serif;
+            font-size: large;
+            text-align: center;
+            border-radius: 100px;
+            
+        }
+    </style>
+
+</head>
+    <body>
+        <div style="float:left ;">
+            <a id="idvoltar" href="../Acervo/acervo.html">
+                <img src="../images/previous.png" width="30" height="30">
+            </a>
+        </div>
+        <div style="float:right ;">
+            <a id="sair" href="../ProjetoLocadoraFilmesHeloisaSouza/login.html">
+                <img src="../images/leave.png" width="30" height="30">
+            </a>
+        </div>
+        <div id="idtelaprincipal">
+            <a href="../ProjetoLocadoraFilmesHeloisaSouza/telaPrincipal.html">
+                <div class="logoTop"><img src="../images/logo.jpg" alt="logo" width="300px"></div>
+            </a>
+        </div>
+    <div>
+        <h1>Locação</h1>
+    </div>
+
+
+    <form action="../Acervo/acervo.html" method="get">
+
+        <div class="clientes">
+            <label for="clientes">
+                <h4>Clientes*</h4>
+            </label>
+            <select list="clientes" id="clientes" size="">
+                <option value="0">-----------</option>
+                <option value="1">Maria Alice Aguiar</option>
+                <option value="2">Roberta Guimarães</option>
+                <option value="3">Rita de Cássia Silva</option>
+                <option value="4">Maria José de Souza</option>
+                <option value="5">Ricardo Lopes</option>
+                <option value="6">João Paulo Freitas</option>
+                <option value="7">Beatriz liviane de Castro</option>
+                <option value="8">Mariana Evelin</option>
+                <option value="9">Suzan Vieira</option>
+            </select>
+        </div>
+        <div class="datalocacao">
+            <label for="">
+                <h4>Data Locação*</h4>
+            </label>
+        </div>
+        <div class="datadevolucao">
+            <input type="datetime-local" name="dataLocacao" id="datalocacao" pattern="" required>
+            <label for="">
+                <h4>Data Devolução*</h4>
+            </label>
+            <input type="datetime-local" name="dataDevolucao" id="datadevolucao" pattern="" required>
+        </div>
+        <br>
+        <div class="descricao">
+            <label for="">
+                <h4 class="logo">Descrição</h4>
+            </label>
+            <textarea name="descricao" id="descricao" cols="40" rows="10" placeholder="Breve descrição..." style="color: #000"></textarea>
+        </div>
+        <br>
+        <div style="text-align: center">
+            <p>
+                <button id="idbotaoConfirmar" type="submit" style="background-color: blueviolet;
+                color: rgb(245, 234, 207);
+                font-style: normal;
+                border-radius: 10px;
+                padding: 5px;
+                width: 10%;
+                cursor: pointer;
+                font-size: normal;
+                font-family: 'Roboto', sans-serif;
+           ">Confirmar</button>&emsp;&emsp;
+                <button id="idbotaoLimpar" type="submit" style="background-color: blueviolet;
+                color: rgb(245, 234, 207);
+                font-style: normal;
+                border-radius: 10px;
+                padding: 5px;
+                width: 10%;
+                cursor: pointer;
+                font-size: normal;
+                font-family: 'Roboto', sans-serif;
+           ">Limpar</button>
+            </p>
+        </div>
+    </form>
+
+    <script>
+        function validarDados() {
+           
+            var clientes = document.getElementById("clientes");
+            if (clientes.value == "") {
+                divResultado.innerHTML = "Informe o cliente!";
+                clientes.focus();
+                return false;
+            }
+            var dataLocacao= document.getElementById("dataLocacao");
+            if (dataLocacao.value == "") {
+                divResultado.innerHTML = "Informe a data de locação!";
+                dataLocacao.focus();
+                return false;
+            }
+            var dataDevolucao= document.getElementById("dataDevolucao");
+            if (dataDevolucao.value == "") {
+                divResultado.innerHTML = "Informe a data de devolução!";
+                dataDevolucao.focus();
+                return false;
+            }
+            divResultado.innerHTML = "";
+            alert("Locação bem sucedida!");
+        
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

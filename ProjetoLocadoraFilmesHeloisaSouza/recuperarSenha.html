@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <style>
+        body {
+            background-color: rgb(134, 69, 151);
+            align-items: center;
+
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-size: xx-large;
+            color: rgb(255, 195, 3);
+        }
+
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-size: xx-large;
+            color: rgb(5, 155, 255);
+        }
+
+        p,
+        a {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-size: large;
+            color: #fff;
+
+
+        }
+
+        #divResultado {
+            background-color: cyan;
+            color: blueviolet;
+            font-family: sans-serif;
+            font-size: large;
+            text-align: center;
+            border-radius: 100px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div style="float:left ;">
+        <a id="idvoltar" href="../ProjetoLocadoraFilmesHeloisaSouza/login.html">
+            <img src="../images/previous.png" width="30" height="30">
+        </a>
+    </div>
+    <div style="float:right ;">
+        <a id="idproximo" href="../ProjetoLocadoraFilmesHeloisaSouza/login.html">
+            <img src="../images/next-button.png" width="30" height="30">
+        </a>
+    </div>
+    <div id="idtelaprincipal">
+        <a href="../ProjetoLocadoraFilmesHeloisaSouza/login.html">
+            <div class="logoTop"><img src="../images/logo.jpg" alt="" width="300px"></div>
+        </a>
+    </div>
+    <div style="text-align: center">
+        <form action="../ProjetoLocadoraFilmesHeloisaSouza/login.html" method="get">
+            <div id="divResultado"></div>
+            <br><br>
+    
+
+            <h2>Recuperar Senha</h2>
+
+            <p>
+                <label for="">
+                    <h2 class="logo">E-mail*</h2>
+                </label>
+                <input type="text" name="nomeUsusario" id="nomeUsuario" required placeholder="Informe o seu e-mail" size="40"
+                    pattern=".{3,}">
+            </p>
+            <br>
+
+            <p>
+                <button id="idbotaoEnviar" type="submit" onclick="validarDados" style="background-color:blueviolet;
+                    color: rgb(245, 234, 207);
+                    font-style:normal ;
+                    border-radius: 10px;
+                    padding: 5px;
+                    width: 20%;
+                    cursor: pointer;
+                    font-size: larger;
+                    font-family:'Roboto', sans-serif;">Enviar</button>
+
+            </p>
+
+
+        </form>
+    </div>
+    <script>
+        function validarDados(){
+       
+        var divResultado = document.getElementById("divResultado");
+    
+        var nome = document.getElementById("usernamecadastro");
+        if (nome.value == ""){
+            divResultado.innerHTML = "Informe o seu e-mail!";
+            nome.focus(); 
+            return false;
+        }
+        
+       divResultado.innerHTML = "";
+       alert("Informe o email!")
+       window.location.href = "login.html"
+               }
+    
+    </script>    
+</body>
+
+</html>

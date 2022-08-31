@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Filmes</title>
+    <link rel="stylesheet" href="../css/global.css" />
+</head>
+
+<body>
+    <div>
+        <a id="idvoltar" href="cadastro.html">
+            <img src="../images/previous.png" width="30" height="30">
+        </a>
+    </div>
+    <div>
+        <a id="idproximo" href="">
+            <img src="../images/next-button.png" width="30" height="30">
+        </a>
+    </div>
+    <div id="idtelaprincipal">
+        <a href="../ProjetoLocadoraFilmesHeloisaSouza/telaPrincipal.html">
+            <div class="logoTop"><img src="../images/logo.jpg" alt="logo" width="300px"></div>
+        </a>
+    </div>
+    <div>
+        <h1>Cadastrar Filme</h1>
+    </div>
+
+
+
+    <form action="../ProjetoLocadoraFilmesHeloisaSouza/telaPrincipal.html">
+
+        <div id="divResultado"></div>
+        <br><br>
+        <div class="titulo">
+            <label for="">
+                <h4 class="logo">Título*</h4>
+            </label>
+            <input type="text" name="titulo" id="idtitulo" placeholder="Informe o título do filme" size="40"
+                pattern=".{3,}" required>
+        </div>
+
+
+        <br>
+        <div class="genero">
+            <label for="">
+                <h4 class="logo">Gênero*</h4>
+            </label>
+            <select name="genero" id="idgenero" size="">
+                <option value="0">-----------</option>
+                <option value="1">Ação</option>
+                <option value="2">Aventura</option>
+                <option value="3">Comédia</option>
+                <option value="4">Documentários</option>
+                <option value="5">Drama</option>
+                <option value="6">Ficção Científica</option>
+                <option value="7">Romance</option>
+                <option value="8">Suspense</option>
+                <option value="9">Terror</option>
+            </select>
+        </div>
+        <br>
+        <div class="premios">
+            <label for="">
+                <h4 class="logo">Prêmios*</h4>
+            </label>
+            <label for="premio1">Globo de Ouro</label>
+            <input type="checkbox" name="premio1" id="premio" required>&emsp;
+            <label for="premio2">Grammy Latino</label>
+            <input type="checkbox" name="premio2" id="premio">&emsp;
+            <label for="premio3">Oscar</label>
+            <input type="checkbox" name="premio3" id="premio">&emsp;
+            <label for="premio4">BAFTA</label>
+            <input type="checkbox" name="premio4" id="premio">&emsp;
+            <label for="premio5">SAG Awards</label>
+            <input type="checkbox" name="premio5" id="premio">&emsp;
+        </div>
+        <br>
+        <div class="descricao">
+            <label for="">
+                <h4 class="logo">Descrição</h4>
+            </label>
+            <textarea name="descricao" id="descricao" cols="40" rows="10" placeholder="Breve descrição..."
+                style="color: #000"></textarea>
+        </div>
+        <br>
+        <div>
+            <p><button type="submit" class="btn btn-outline-primary">Salvar</button>&emsp;
+                <button type="reset" class="btn btn-outline-primary">Limpar</button>
+            </p>
+        </div>
+    </form>
+    <script>
+        function validarDados() {
+
+            var divResultado = document.getElementById("divResultado");
+
+            var titulo = document.getElementById("idtitulo");
+            if (titulo.value == "") {
+
+                divResultado.innerHTML = "Informe o título!";
+                titulo.focus();
+                return false;
+            }
+            var genero = document.getElementById("idgenero");
+            if (genero.value == "") {
+                divResultado.innerHTML = "Informe o gênero!";
+                genero.focus();
+                return false;
+            }
+
+            var checkboxs = document.getElementsByName("premio");
+            var checkboxSelecionado = false;
+
+            for (var i = 0; i < checkboxs.length; i++) {
+                if (checkboxs[i].checked) {
+                    checkboxSelecionado = true;
+                }
+            }
+            if (!checkboxSelecionado) {
+                divResultado.innerHTML = "Informe um prêmio!";
+                return false;
+            }
+            var descricao = document.getElementById("iddescricao");
+            if (descricao.value == "") {
+                divResultado.innerHTML = " Escreva uma breve descrição!";
+                descricao.focus();
+                return false;
+            }
+            divResultado.innerHTML = "";
+            alert("Cadastro bem sucedido!");
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

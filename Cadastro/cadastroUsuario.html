@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="../css/global.css" />
+</head>
+
+
+<body>
+    <div style="float:left ;">
+        <a id="idvoltar" href="cadastro.html">
+            <img src="../images/previous.png"
+                width="30" height="30">
+        </a>
+    </div>
+    <div style="float:right ;">
+        <a id="idproximo" href="">
+            <img src="../images/next-button.png"
+                width="30" height="30">
+        </a>
+    </div>
+    <div id="idtelaprincipal">
+        <a href="../ProjetoLocadoraFilmesHeloisaSouza/telaPrincipal.html">
+            <div class="logoTop"><img src="../images/logo.jpg" alt="logo" width="300px"></div>
+        </a>
+    </div>
+    <div>
+        <h1>Cadastrar Usuário</h1>
+    </div>
+    <form action="../ProjetoLocadoraFilmesHeloisaSouza/telaPrincipal.html" method="get">
+
+        <div class="nome">
+            <label for="">
+                <h4 class="logo">Nome*</h4>
+            </label>
+            <input type="text" name="nomeUsusario" id="nomeUsuario" placeholder="Informe o seu nome" size="40"
+                pattern=".{3,}">
+        </div>
+        <br>
+        <div class="sexo">
+            <label for="">
+                <h4 class="logo">Sexo*</h4>
+            </label>
+            <label for="feminino">Feminino</label>
+            <input type="radio" name="feminino" id="feminino">&emsp;&emsp;
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="masculino" id="masculino">&emsp;&emsp;
+            <label for="outros">Outros</label>
+            <input type="radio" name="Outros" id="outros">
+        </div>
+        <br>
+        <div class="preferencias">
+            <label for="">
+                <h4 class="logo">Preferências*</h4>
+            </label>
+            <label for="acao">Ação</label>
+            <input type="checkbox" name="acao" id="acao">&emsp;
+            <label for="aventura">Aventura</label>
+            <input type="checkbox" name="aventura" id="aventura">&emsp;
+            <label for="comedia">Comédia</label>
+            <input type="checkbox" name="comedia" id="comedia">&emsp;
+            <label for="documentarios">Documentários</label>
+            <input type="checkbox" name="documentarios" id="documentarios">&emsp;
+            <label for="drama">Drama</label>
+            <input type="checkbox" name="drama" id="drama">&emsp;
+            <label for="ficcaoCientifica">Ficção Científica</label>
+            <input type="checkbox" name="ficcaoCientifica" id="ficcaoCientifica">&emsp;
+            <label for="romance">Romance</label>
+            <input type="checkbox" name="romance" id="romance">&emsp;
+            <label for="suspense" style="font-size: 16px;">Suspense</label>
+            <input type="checkbox" name="suspense" id="suspense">
+        </div>
+        <br>
+        <div class="observacoes">
+            <label for="">
+                <h4 class="logo">Observações</h4>
+            </label>
+            <textarea name="obeservacoes" id="obeservacoes" cols="40" rows="10" placeholder="Observações..." style="background-color: #fff; color: #000"></textarea>
+        </div>
+        <br>
+        <div class="email">
+            <label for="">
+                <h4 class="logo">E-mail*</h4>
+            </label>
+            <input type="text" name="nomeUsusario" id="email" placeholder="Informe o seu e-mail" size="40"
+                pattern=".{3,}">
+        </div>
+        <br>
+        <div>
+            <p>
+                <button type="submit" class="btn btn-outline-primary">Cadastrar</button>&emsp;
+                <button type="reset" class="btn btn-outline-primary">Limpar</button>
+            </p>
+        </div>
+
+
+
+
+</body>
+
+</html>
